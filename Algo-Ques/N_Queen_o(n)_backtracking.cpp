@@ -30,7 +30,7 @@ void nQueens(int k, int n){
 bool canPlace(int k, int i){ 
     for (int j = 1;j <= k - 1;j++){ 
         if (arr[j] == i ||  
-            (abs(arr[j] - i) == abs(i - k))) 
+            (abs(arr[j] - i) == abs(j - k))) 
            return false; 
     } 
     return true; 
