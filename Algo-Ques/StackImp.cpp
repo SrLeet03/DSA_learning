@@ -59,7 +59,8 @@ int FindMaxAreaOfBinaryMatrix (int a[] , int n , int m){
     // 0 1 0 1 1
     // 0 1 1 1 1
     // 1 1 1 1 1
-    // 1 1 1 0 0      -> max area from a[i][j]==1 if 8 ;
+    // 1 1 1 0 0      -> max area from a[i][j]==1 is 8 ;
+    // can be done by splitling this in 1-d array with addition of height and if a[i][j]==0 so there is ground level !
 } 
 int main()
 {
