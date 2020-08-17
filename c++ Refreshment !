@@ -1,0 +1,46 @@
+n C++, two most common choices to do is
+
+iosteams - cin / cout (NEW)
+stdio - scanf / printf (C style)
+Though it seems inconsequential, handling I/O correctly can make your solution milliseconds or even a few seconds. This becomes relevant when the input is huge (for example, reading 10^610
+​6
+​​  integers).
+
+Before moving on to I/O optimization, let’s quickly see how to use each I/O function.
+
+Stdio #
+Include statement: #include <cstdio>
+
+scanf and printf need to know the type of the variable you are reading/printing, denoted by using a format specifier (%).
+
+Here are the most common ones, for a complete list you can go here
+
+scanf("%d", &x); // read int
+scanf("%lld", &x); // read long long int
+scanf("%s", &s); // read string
+scanf("%f", &d); // read float
+Similarly,
+
+printf("%d", &x); // print int
+printf("%lld", &x); // print long long int
+printf("%s", &s); // print string
+printf("%f", &d); // print float
+Two space separated integers can also be read in a single scanf statement
+
+scanf("%d %d", &a, &b);
+
+////////////////////////////////////////////////////////
+Is my solution going to run in time? #
+The actual answer will depend on a number of factors like hidden constants, allowed execution time, and the server where the code is executed.
+
+Nevertheless, below is a general rule of thumb to determine whether your solution is going to run in time, given that the time constraint is only a few seconds:
+
+                              N                                                Acceptable
+                      10^7                                                      O(N)
+
+ 	          10^6                                                          O(N*logN)
+       
+                 10^5                                               	O(N*log^2N) ,                                                                 (N*\sqrt{N})O(N∗√oN)
+        
+               10^4                                                              O(N^2)
+etc ............
