@@ -59,3 +59,64 @@ void print_prime_factors(int N){
     cout << N << " ";
   cout << "\n";
 }
+
+#ARRAYS  VS VECTORS  : Many times, you need a structure like an array that is dynamic in size. Vectors are dynamic arrays. Vectors, similar to an array, have contiguous memory allocation 
+so that random access is O(1)O(1) for vectors as well. One way to implement vectors using an array is to copy the array to a new array of double the size every time the first array is full.
+As discussed in the complexity analysis chapter, the amortized time complexity is O(1) for inserting elements in such a case.
+
+#VECTORS : operations
+vector<int> v; // new empty vector !
+vecotr<int> v(5); // new vector of size 5
+vecotr<boolean> v(5, true); // new vector of size 5 with all values initialized to true
+ 
+v.size(); // get size
+v[i]; // access ith element
+ 
+v.push_back(x); // insert x at end of vector
+v.pop_back(x); // delete last element
+ 
+v.begin(); // get iterator to beginning
+v.end(); // get iterator to end (theoretically, the element after the last element)
+ 
+v.erase(v.begin() + 4); //delete 4th element
+ 
+sort(v.begin(), v.end()) //sort vector
+reverse(v.begin(), v.end()) // reverse the vector
+
+Q.Given an array AA of NN integers. Answer QQ queries of the type (l, r)(l,r) - reverse the subarray A[l...r]A[l...r]. Print the array after each query.
+Input format The first line contains two integers NN and QQ (1 \leq N, Q \leq 10^3)(1≤N,Q≤10 ).The second line contains NN space-separated 
+integers representing the array A[]A[] (1 \leq A[i] \leq 10^6)(1≤A[i]≤10).
+
+for(int i = 0; i < Q; i++) {
+    int l, r;
+    cin >> l >> r;
+    l --; r --; // covert to 0-based index
+
+    for(int p1 = l, p2 = r; p1 < p2; p1++, p2--){
+      swap(A[p1], A[p2]);
+    }
+  }
+  
+  Q.SubArray sum problem ! ->Given an array, AA, of NN integers, answer QQ queries of the type (l, r)(l,r) - sum of the elements in the 
+  subarray A[l...r]A[l...r]. Print the sum for each query. Next, QQ lines each contains pair of integers ll and rr (1 \leq l \leq r \leq N)(1≤l≤r≤N)
+  
+  Optimization #
+First, let’s discuss what the prefix sum array is.
+
+The prefix sum array sum[]sum[] of an array A[]A[] is defined as
+
+sum[i] = \sum_{k=1}^{i} A[k]sum[i](i,A[k] =∑k=1
+
+or, iith element of sum[]sum[] is sum of first ii elements of A[]A[]
+
+We can use the prefix sum array to find the sum of a subarray in O(1)O(1) time.
+
+sum[i...j] = A[i] + A[i+1] + ... + A[j]sum[i...j]=A[i]+A[i+1]+...+A[j]
+
+== (A[1] + A[2] + ... +A[j]) - (A[1] + A[2] + ... +A[i-1])(A[1]+A[2]+...+A[j])−(A[1]+A[2]+...+A[i−1])
+
+== sum[j] - sum[i-1]sum[j]−sum[i−1]
+
+From preprocessing to computing the sum[]sum[] array takes O(N)O(N) time. Each query is just O(1)O(1).
+
+So the total time complexity is O(N + Q). otherwise time complexity is O(n*Q) ;
