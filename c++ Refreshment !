@@ -120,3 +120,28 @@ sum[i...j] = A[i] + A[i+1] + ... + A[j]sum[i...j]=A[i]+A[i+1]+...+A[j]
 From preprocessing to computing the sum[]sum[] array takes O(N)O(N) time. Each query is just O(1)O(1).
 
 So the total time complexity is O(N + Q). otherwise time complexity is O(n*Q) ;
+
+#Sieve of Eratosthenes #
+The Sieve of Eratosthenes is a simple algorithm to generate all primes to generate all primes from 11 to NN in O(N*log(logN))O(N∗log(logN)).
+Steps:
+Create a list of all numbers from 22 to NN. Initially, all numbers are unmarked.
+Starting from p=2p=2, we will mark all multiples of 22 less than or equal to NN. These numbers are definitely not prime since 22 divides them.
+Move to the next unmarked number, i.e., p = 3p=3. Mark all its multiples.
+Stop if p>\sqrt{N}p>√
+N
+Each unmarked number that we visit is a prime because all non-primes will be marked by one of its factors before we reach this number.
+
+We can use a Boolean array of size NN to distinguish between marked and unmarked numbers.
+
+Let’s understand the process better using the illustration below for N = 30. We will stop after we reach :ceil(√3 0) i.e 66
+
+ vector<bool> is_prime(N + 1, true); // size is N+1 so we can access is_prime[N]
+  
+  for (int i = 2; i * i <= N; i++) {
+    if (is_prime[i]) {
+      for (int j = i + i; j <= N; j += i)
+        is_prime[j] = false;
+    }
+  }
+
+
