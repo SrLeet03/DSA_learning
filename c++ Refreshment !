@@ -143,5 +143,15 @@ Let’s understand the process better using the illustration below for N = 30. W
         is_prime[j] = false;
     }
   }
+  Given two integers, NN and MM, print all primes between NN and MM (both inclusive).
+  vector<int> is_prime(M-N+1, true);
+
+  for (int i = 2; i * i <= M ; i++) {
+    int start = (((N - 1) / i) + 1) * i;
+    for (int j = start; j <= M ; j+= i) {
+      if (j >= N && j <= M) 
+        is_prime[j - N] = false;
+    }
+  }
 
 
