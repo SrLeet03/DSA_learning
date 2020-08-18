@@ -153,7 +153,18 @@ Let’s understand the process better using the illustration below for N = 30. W
         is_prime[j - N] = false;
     }
   }
-
+  
+  
+  
+  
+ #STRINGS IN c++ !
+Converting Strings to Numbers in C/C++ : stoi() : The stoi() function takes a string as an argument and returns its value. Following is a simple implementation:
+     ]string str1 = "45"; 
+    string str2 = "3.14159"; 
+    int myint1 = stoi(str1); 
+    int myint2 = stoi(str2); 
+    cout<<myint1<<endl ;stoi("45") is 45
+                        stoi("3.14159") is 3
 
 #Sorting Methods : 
 
