@@ -30,6 +30,8 @@ Two space separated integers can also be read in a single scanf statement
 scanf("%d %d", &a, &b);
 
 ////////////////////////////////////////////////////////
+
+
 Is my solution going to run in time? #
 The actual answer will depend on a number of factors like hidden constants, allowed execution time, and the server where the code is executed.
 
@@ -82,6 +84,13 @@ v.erase(v.begin() + 4); //delete 4th element
  
 sort(v.begin(), v.end()) //sort vector
 reverse(v.begin(), v.end()) // reverse the vector
+
+
+---------> Accumulate : used for finding the sum of array or vector wihout any func : 
+int sum = 0 ;
+accumulate(arr.begin() , arr.end() , sum ) ; cout<<sum<<endl;
+
+
 
 Q.Given an array AA of NN integers. Answer QQ queries of the type (l, r)(l,r) - reverse the subarray A[l...r]A[l...r]. Print the array after each query.
 Input format The first line contains two integers NN and QQ (1 \leq N, Q \leq 10^3)(1≤N,Q≤10 ).The second line contains NN space-separated 
