@@ -89,7 +89,7 @@ reverse(v.begin(), v.end()) // reverse the vector
 ---------> Accumulate : used for finding the sum of array or vector wihout any func : 
 int sum = 0 ;
 accumulate(arr.begin() , arr.end() , sum ) ; cout<<sum<<endl;
-
+similary ....accumulate(arr , arr+n , sum ) ; cout<<sum<<endl;
 
 
 Q.Given an array AA of NN integers. Answer QQ queries of the type (l, r)(l,r) - reverse the subarray A[l...r]A[l...r]. Print the array after each query.
