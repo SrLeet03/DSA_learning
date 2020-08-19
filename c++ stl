@@ -24,4 +24,7 @@ mapped value pair has to be unique in this case.
         cout << itr->first   << '\t' << itr->second << '\n';
         
     "multimap mp has  number of elements"; ----------> mp.size() ; 
+    /////
+    multimap_name.cbegin() : is a built-in function in C++ STL which returns a constant iterator referring to the first element in the multimap container.
+
            
