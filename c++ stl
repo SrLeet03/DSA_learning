@@ -46,6 +46,8 @@ queue <int> gquiz; gquiz.front();
  Priority queues are a type of container adapters, specifically designed such that the first element of the queue is the greatest of all elements in the queue and elements 
  are in non increasing order(hence we can see that each element of the queue has a priority{fixed order}).
  
+ Priority queue of pairs in C++ (Ordered by first) ..............................IMPORTANT...............................
+ 
   ----> Max Heap == priority Queue  <--------- 
   
   And syntax for the priority queue ans queue is sameeeeeeeeeeeee . Max heap = priority_queue <int> q ;
