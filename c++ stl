@@ -1,6 +1,6 @@
-#MULTIMAP : 
+#MULTIMAP :
 Multimap is similar to map with an addition that multiple elements can have same keys. Also, it is NOT required that the key value and 
-mapped value pair has to be unique in this case.
+mapped value pair has to be unique in this case .
  // insert elements in random order 
     gquiz1.insert(pair <int, int> (1, 40));  or insert({1,2}) ; 
     gquiz1.insert(pair <int, int> (2, 30)); 
@@ -27,7 +27,9 @@ mapped value pair has to be unique in this case.
     /////
     multimap_name.cbegin() : is a built-in function in C++ STL which returns a constant iterator referring to the first element in the multimap container.
 
-#QUEUE 
+#QUEUE   
+ 
+  
 Queues are a type of container adaptors which operate in a first in first out (FIFO) type of arrangement. Elements are inserted at the back (end) and are deleted from the front.
 empty() – Returns whether the queue is empty.
 size() – Returns the size of the queue.
@@ -35,4 +37,25 @@ queue::swap() in C++ STL: Exchange the contents of two queues but the queues mus
 queue::emplace() in C++ STL: Insert a new element into the queue container, the new element is added to the end of the queue.
 queue::front() and queue::back() in C++ STL– front() function returns a reference to the first element of the queue. back() function returns a reference to the last element of the queue.
 push(g) and pop() – push() function adds the element ‘g’ at the end of the queue. pop() function deletes the first element of the queue
+
+queue <int> gquiz; gquiz.front(); 
+ gquiz.back() : gquiz.back(); 
+ 
+ #Priority Queue in C++
+ 
+ Priority queues are a type of container adapters, specifically designed such that the first element of the queue is the greatest of all elements in the queue and elements 
+ are in non increasing order(hence we can see that each element of the queue has a priority{fixed order}).
+ 
+  ----> Max Heap == priority Queue  <--------- 
+  
+  And syntax for the priority queue ans queue is sameeeeeeeeeeeee . Max heap = priority_queue <int> q ;
+  
+ 
+  ----> min Heap  <---------
+  
+ // Syntax to create a min heap for priority queue
+priority_queue <int, vector<int>, greater<int>> g = gq;
+
+
+
            
